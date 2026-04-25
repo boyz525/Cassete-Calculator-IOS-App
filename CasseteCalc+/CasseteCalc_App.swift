@@ -1,17 +1,14 @@
-//
-//  CasseteCalc_App.swift
-//  CasseteCalc+
-//
-//  Created by Александр Малахов on 18.04.2026.
-//
-
 import SwiftUI
 
 @main
 struct CasseteCalc_App: App {
+    @State private var appState = AppState()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appState)
+                .preferredColorScheme(.light) // Light only by design
         }
     }
 }
